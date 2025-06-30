@@ -4,13 +4,46 @@
   <meta charset="UTF-8">
   <title>My Video</title>
 </head>
-<body>
-  <h1>My Video Display</h1>
+<body> <center>
+  <h1>Health Care Bot: (Microsoft Internship) </h1>
+  <p>Health  Care Bot: (Microsoft Internship) - <br>
+Tools: Azure Bot Framework, QnA Maker, HTML, CSS. <br>
+Developed an AI-powered chatbot to assist users with health information. <br>
+Integrated with Azure QnA Maker and deployed using Azure App Services</p>
 
-  <video width="640" height="360" controls>
+  <video id="myVideo" width="640" height="360">
     <source src="1642478323844.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 
+  <br><br>
+
+  <button onclick="playVideo()">Play</button>
+  <button onclick="pauseVideo()">Pause</button>
+  <button onclick="goFullScreen()">Fullscreen</button>
+
+  <script>
+    const video = document.getElementById('myVideo');
+
+    function playVideo() {
+      video.play();
+    }
+
+    function pauseVideo() {
+      video.pause();
+    }
+
+    function goFullScreen() {
+      if (video.requestFullscreen) {
+        video.requestFullscreen();
+      } else if (video.webkitRequestFullscreen) { // Safari
+        video.webkitRequestFullscreen();
+      } else if (video.msRequestFullscreen) { // IE11
+        video.msRequestFullscreen();
+      }
+    }
+  </script>
+
+</center>
 </body>
 </html>
