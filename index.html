@@ -24,9 +24,25 @@ Integrated with Azure QnA Maker and deployed using Azure App Services</p>
 
   <br><br>
 
-  <button onclick="playVideo()">Play</button>
-  <button onclick="pauseVideo()">Pause</button>
-  <button onclick="goFullScreen()">Fullscreen</button>
+  <style>
+    .video-btn {
+      padding: 10px 20px;
+      margin: 5px;
+      font-size: 16px;
+      background-color: #0078d4;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .video-btn:hover {
+      background-color: #005fa3;
+    }
+  </style>
+  <button class="video-btn" onclick="playVideo()">Play</button>
+  <button class="video-btn" onclick="pauseVideo()">Pause</button>
+  <button class="video-btn" onclick="goFullScreen()">Fullscreen</button>
 
   <script>
     const video = document.getElementById('myVideo');
